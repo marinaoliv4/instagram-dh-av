@@ -12,7 +12,7 @@ const postsController = {
 
         const postsUsuario = await Post.findAll({
             where: {
-                usuarios_is: id
+                usuarios_id: id
             }
         });
 
