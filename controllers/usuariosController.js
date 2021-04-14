@@ -18,8 +18,28 @@ const usuariosController = {
         return response.json(novoUsuario);
     },
     update: async (request, response) => {
-        let {id} = request.params;
+        let { id } = request.params;
         let { nome, email, senha } = request.body;
+
+        let usuarioAtualizado = await Usuario.update({
+            nome, 
+            email, 
+            senha
+        }, {
+            where: { id }
+        })
+
+        return response.send(usuarioAtualizado);
+    },
+    delete: async (request, response) => {
+        let { id } = request.params;
+
+        const usuarioDeletado = await Usuario.destroy({
+            where: {id}
+        });
+
+        return res.json(usuarioDeletado);
+        
     }
 }
 
