@@ -5,7 +5,7 @@ const usuariosController = {
         let usuarios =  await Usuario.findAll();
         
         return response.json(usuarios);
-    },
+    },  
     create: async (request, response) => {
         let {nome, email, senha} = request.body;
 
@@ -38,7 +38,7 @@ const usuariosController = {
             where: {id}
         });
 
-        return res.json(usuarioDeletado);
+        return response.json(usuarioDeletado);
         
     }
 }
