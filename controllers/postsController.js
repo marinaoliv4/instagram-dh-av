@@ -5,7 +5,7 @@ const postsController = {
     index: async (request, response) => {
         const posts = await Post.findAll();
 
-        return response.json(posts);
+        return response.render('index', { listaPosts: posts });
     },
     show: async(request, response) => {
         const { usuarios_id } = request.params;
