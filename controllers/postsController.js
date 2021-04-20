@@ -8,11 +8,11 @@ const postsController = {
         return response.json(posts);
     },
     show: async(request, response) => {
-        const { id } = request.params;
+        const { usuarios_id } = request.params;
 
         const postsUsuario = await Post.findAll({
             where: {
-                usuarios_id: id
+                usuarios_id
             }
         });
 
