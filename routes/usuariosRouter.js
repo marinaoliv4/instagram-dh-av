@@ -9,6 +9,9 @@ router.get('/', usuariosController.index);
 router.get('/registro', usuariosController.registro);
 // http://localhost:3000/usuarios/registro
 
+router.get('/login', usuariosController.login);
+// http://localhost:3000/usuarios/login
+
 router.post('/', ValidarCadastro, usuariosController.create);
 // http://localhost:3000/usuarios/
 

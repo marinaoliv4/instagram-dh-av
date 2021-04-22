@@ -6,6 +6,10 @@ const usuariosController = {
         
         return response.render('usuarios', { listaUsuarios: usuarios });
     },
+
+    login: (request, response) => {
+        return response.render('login');
+    }, 
     
     registro: (request, response) => {
         return response.render('registro'); //coloca o ejs que quer renderizar - a pagina do formulario- registro nome da view
@@ -20,7 +24,7 @@ const usuariosController = {
             senha
         });
 
-        return response.json(novoUsuario);
+        return response.redirect('/usuarios/login');
     },
     update: async (request, response) => {
         const { id } = request.params;
