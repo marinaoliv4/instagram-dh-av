@@ -5,7 +5,12 @@ const usuariosController = {
         const usuarios =  await Usuario.findAll();
         
         return response.render('usuarios', { listaUsuarios: usuarios });
-    },  
+    },
+    
+    registro: (request, response) => {
+        return response.render('registro'); //coloca o ejs que quer renderizar - a pagina do formulario- registro nome da view
+    },
+
     create: async (request, response) => {
         const {nome, email, senha} = request.body;
 

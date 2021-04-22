@@ -1,8 +1,8 @@
 module.exports = {
   "username": "root",
-  "password": "root",
+  "password": "051996",
   "database": "instagram",
   "host": "127.0.0.1",
   "dialect": "mysql",
-  "port": "8889"
+  "port": "3306"
 }
